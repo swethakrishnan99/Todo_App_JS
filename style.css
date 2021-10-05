@@ -1,0 +1,161 @@
+body {
+  font-family: "roboto", sans-serif;
+}
+#homePage {
+  height: 90vh;
+  margin: 5vh 10vw;
+  filter: blur(0px);
+}
+.homePage .head {
+  display: flex;
+  justify-content: space-between;
+  width: 80vw;
+}
+.homePage .title {
+  font-size: 65px;
+}
+.homePage .thik {
+  font-weight: 900;
+  margin-right: 20px;
+}
+.homePage .thin {
+  font-weight: lighter;
+  color: rgb(75, 74, 74);
+}
+.addlist {
+  line-height: 40px;
+  font-size: 45px;
+  font-weight: lighter;
+  color: rgb(75, 74, 74);
+  cursor: pointer;
+}
+.homePage i {
+  color: red;
+}
+#array {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#array > .listBoxSmall {
+  width: 250px;
+  height: 400px;
+  border: 1px solid red;
+  margin: 20px 3vw;
+  box-shadow: 5px 5px 10px rgb(194, 192, 192);
+  border-radius: 10px;
+}
+.listBoxSmall .listTitle {
+  color: red;
+  font-size: 35px;
+  font-weight: 500;
+  text-align: center;
+  margin: 15px 0;
+}
+.listBoxSmall hr {
+  margin-left: 80px;
+}
+.small {
+  font-size: 30px;
+  position: relative;
+  top: 260px;
+  right: 10px;
+  float: right;
+}
+.small .blue {
+  color: royalblue;
+}
+.small .red {
+  color: red;
+}
+.newListPage,
+.newItemPage {
+  width: 450px;
+  height: 200px;
+  background-color: white;
+  border: 1px solid red;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgb(194, 192, 192);
+  text-align: center;
+  display: none;
+  position: fixed;
+  top: 300px;
+  right: 40vw;
+}
+.newListPage p,
+.newItemPage p {
+  color: red;
+  font-size: 28px;
+  font-weight: 300;
+}
+.newListPage input,
+.newItemPage input {
+  width: 300px;
+  height: 30px;
+  margin: auto;
+  display: block;
+  text-align: center;
+  border: 1px solid red;
+  border-radius: 5px;
+  box-shadow: 5px 5px 10px rgb(194, 192, 192);
+}
+.newListPage button,
+.newItemPage button {
+  background-color: red;
+  color: white;
+  border: 1px solid red;
+  border-radius: 25px;
+  width: 100px;
+  height: 40px;
+  margin: 20px auto;
+  font-size: 20px;
+  font-weight: 900;
+  cursor: pointer;
+}
+.listpage {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+#listPageBox {
+  width: 350px;
+  height: 400px;
+  border: 1px solid red;
+  margin: 20px 3vw;
+  box-shadow: 5px 5px 10px rgb(194, 192, 192);
+  border-radius: 10px;
+}
+#listPageBox > .listTitle {
+  color: red;
+  font-size: 35px;
+  font-weight: 300;
+  text-align: center;
+  margin: 15px 0;
+}
+#listPageBox > hr {
+  margin-left: 100px;
+}
+#listPageHead {
+  width: 400px;
+  text-align: center;
+}
+#listPageHead > span {
+  background-color: white;
+  font-size: 80px;
+}
+#listPageHead > hr {
+  border: 4px solid black;
+  z-index: -1;
+  position: relative;
+  top: 70px;
+}
+#listPageHead > i {
+  display: block;
+  font-size: 30px;
+  color: red;
+}
+#listPageHead .iconname {
+  color: grey;
+  font-family: "roboto", sans-serif;
+  font-weight: 00;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>To Do App</title>
+</head>
+<body>
+    <div class="homePage" id="homePage">
+        <div class="head">
+            <p><span class="title thik">Tasks</span>&nbsp;<span class="title thin">Lists</span></p>
+            <p class="addlist" onclick="newList()"><i class="fas fa-plus-circle" >&nbsp;</i><span>Add List</span></p>
+        </div>
+        <div id="array"></div>
+    </div>
+    <div class="listpage" id="listPage">
+        <div id="listPageHead"></div>
+        <div id="listPageBox"></div>
+    </div>
+    <div class="newListPage" id="newListPage">
+        <p class>Add New List</p>
+        <input type="text" value="" id="inputList" class="inputList" placeholder="Add New list">
+        <button id="add" class="add" onclick="createList()">ADD</button>
+        <button id="close" class="close" onclick="backHome()">CLOSE</button>
+    </div>
+    <div class="newItemPage" id="newItemPage">
+        <p class>Add New item</p>
+        <input type="text" value="" class="inputList" placeholder="Add New item">
+        <button class="add" onclick="createItem()">ADD</button>
+        <button class="close" onclick="backHome()">CLOSE</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
