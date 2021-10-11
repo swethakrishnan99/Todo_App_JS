@@ -4,35 +4,52 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>To Do App</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d65e853b8d.js" ></script>
+    <title>TODO APP</title>
 </head>
 <body>
-    <div class="homePage" id="homePage">
+    <div class="home-page" id="homePage">
         <div class="head">
-            <p><span class="title thik">Tasks</span>&nbsp;<span class="title thin">Lists</span></p>
-            <p class="addlist" onclick="newList()"><i class="fas fa-plus-circle" >&nbsp;</i><span>Add List</span></p>
+            <div class="heading-home">
+                <p class="bold-heading">Tasks<span class="thin-heading">Lists</span></p>
+                <p class="add-head-home" onclick="newlistPopup()" ><i class="fa fa-plus-circle"></i><span class="add-head-home">Add Lists</span></p>
+            </div>
         </div>
-        <div id="array"></div>
+        <div id="noList">No Items in the todo list</div>
+        <div class="lists-home" id="lists"></div>
     </div>
-    <div class="listpage" id="listPage">
-        <div id="listPageHead"></div>
-        <div id="listPageBox"></div>
+    <div class="none" id="selectedTodo">
+        <hr>
+        <div class="heading-page2">
+            <p class="bold-heading" id='selectedHeading'></p>
+            <p class='back' onclick="backHome(1)"><i class="fa fa-chevron-circle-left"></i> Back</p>
+        </div>
+         <div class="card-2">
+            <p class="card-heading" id='selectedHeading1'></p><hr>
+            <div class='footer-2'>
+                <p class='btn-completed' onclick="removeList(this)"><i class="fas fa-trash-alt"></i></p>
+                <p class='btn-add' onclick="newItemPopup(1,this)"><i class="fa fa-plus-circle"></i></p>
+            </div>
+            <ul id='selectedList' style="list-style-type:none;"></ul>
+        </div>
     </div>
-    <div class="newListPage" id="newListPage">
-        <p class>Add New List</p>
-        <input type="text" value="" id="inputList" class="inputList" placeholder="Add New list">
-        <button id="add" class="add" onclick="createList()">ADD</button>
-        <button id="close" class="close" onclick="backHome()">CLOSE</button>
+    <div class="none" id="newListPopup">
+        <p >Add New List</p>
+        <input type="text" value="" id="input1" class="inputfield" placeholder="Add New list">
+        <button id="add" class="add" onclick="addToList()">ADD</button>
+        <button id="close" class="close" onclick="backHome(0)">CLOSE</button>
     </div>
-    <div class="newItemPage" id="newItemPage">
-        <p class>Add New item</p>
-        <input type="text" value="" class="inputList" id="inputItem" placeholder="Add New item">
-        <button class="add" onclick="createItem()">ADD</button>
-        <button class="close" onclick="backHome()">CLOSE</button>
+    <div class="none" id="newItemPopup">
+        <p>Add New Item</p>
+        <input type="text" value="" id="input2" class="inputfield" placeholder="Add New list">
+        <button id="add" class="add" onclick="addToItems()">ADD</button>
+        <button id="close" class="close" onclick="backHome(2)">CLOSE</button>
     </div>
+    
     <script src="script.js"></script>
 </body>
 </html>
