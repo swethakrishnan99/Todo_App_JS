@@ -17,8 +17,6 @@ function newlistPopup() {
 
 function newItemPopup(flag,element){
   currentList =element;
-  console.log(element);
-  console.log(flag);
   document.getElementById("newItemPopup").classList.add("popUp");
   document.getElementById("newItemPopup").classList.remove("none");
   if (flag ===0){
@@ -181,7 +179,6 @@ function addToItems(){
 function markedDone(element){
   id = element.parentNode;
   parentId =element.parentNode.parentNode.parentNode;
-  console.log(parentId);
   for(let i =0;i<itemsList.length;i++){
     if(itemsList[i].id ==parentId.getAttribute("data-key")){
       for(j=0;j<itemsList[i].taskList.length;j++){
